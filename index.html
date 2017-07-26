@@ -141,6 +141,28 @@
 <script src="//code.jquery.com/jquery-latest.js"></script>
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.7/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.7/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.gallery').featherlightGallery({
+        gallery: {
+          fadeIn: 300,
+          fadeOut: 300
+        },
+        openSpeed:    300,
+        closeSpeed:   300
+      });
+      $('.gallery2').featherlightGallery({
+        gallery: {
+          next: 'next »',
+          previous: '« previous'
+        },
+        variant: 'featherlight-gallery2'
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>
