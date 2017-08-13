@@ -115,11 +115,15 @@
     });
     var lastScrollTop = 0;
 $(window).scroll(function(event){
-   if (scrollTop()){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
        $('.logo').css('transform', 'translateY(-100%)');
    } else {
+      // upscroll code
       $('.logo').css('transform', 'translateY(0)');
    }
+   lastScrollTop = st;
 });
   </script>
 
