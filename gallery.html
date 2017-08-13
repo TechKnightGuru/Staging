@@ -21,7 +21,7 @@
     .navbar-default { background-color: #588d43; background-image: none;}
     .navbar { border:none; }
     .thumbnail { border: none; background: none; }
-    .logo { position: absolute; top: 0px; margin-left: -52px;}
+    .logo { position: absolute; top: 0px; margin-left: -52px; transform: translateY(-100%); transition: 0.5s ease-in-out;}
 
 </style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js"></script>
@@ -113,6 +113,14 @@
         variant: 'featherlight-gallery2'
       });
     });
+    var lastScrollTop = 0;
+$(window).scroll(function(event){
+   if (scrollTop()){
+       $('.logo').css('transform', 'translateY(-100%)');
+   } else {
+      $('.logo').css('transform', 'translateY(0)');
+   }
+});
   </script>
 
 
