@@ -121,7 +121,9 @@ $(window).scroll(function(event){
        $('.logo').css('transform', 'translateY(-100%)');
    } else {
       // upscroll code
-      $('.logo').css('transform', 'translateY(0)');
+   }
+   if (st == 0){
+       $('.logo').css('transform', 'translateY(0)');
    }
    lastScrollTop = st;
 });
