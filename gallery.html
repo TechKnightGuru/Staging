@@ -95,6 +95,7 @@
 
   <script>
     $(document).ready(function(){
+      $('.logo').css('transform', 'translateY(0)');
       $('.gallery').featherlightGallery({
         gallery: {
           fadeIn: 300,
@@ -121,7 +122,7 @@ $(window).scroll(function(event){
        $('.logo').css('transform', 'translateY(-100%)');
    } else {
       // upscroll code
-      $('.logo').css('transform', 'translateY(0)');
+      if(!$(this)scrollTop){$('.logo').css('transform', 'translateY(0)');}
    }
    lastScrollTop = st;
 });
